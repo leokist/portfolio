@@ -1,4 +1,6 @@
 function ShowHome() {
+  var divDireito = document.getElementById("container_direito");
+  var divEsquerdo = document.getElementById("container_esquerdo");
   var divProg = document.getElementById("container_prog");
   var divEng = document.getElementById("container_eng");
   var divSobre = document.getElementById("container_sobre");
@@ -10,9 +12,12 @@ function ShowHome() {
   var circleEng_2 = document.getElementById("circle_eng_2");
   var circleEng_3 = document.getElementById("circle_eng_3");
 
+  divEsquerdo.style.width = "100%";
+  divDireito.style.display ="none";
   divEng.style.display = "none";
   divProg.style.display = "none";
   divSobre.style.display = "none";
+
 
   radioHome.checked = true;
 
@@ -38,6 +43,8 @@ function ShowHome() {
 }
 
 function ShowDivEng() {
+  var divEsquerdo = document.getElementById("container_esquerdo");
+  var divDireito = document.getElementById("container_direito");
   var divProg = document.getElementById("container_prog");
   var divEng = document.getElementById("container_eng");
   var divSobre = document.getElementById("container_sobre");
@@ -49,6 +56,8 @@ function ShowDivEng() {
   var circleEng_2 = document.getElementById("circle_eng_2");
   var circleEng_3 = document.getElementById("circle_eng_3");
   
+  divEsquerdo.style.width = "50%";
+  divDireito.style.display ="inline-block";
   divEng.style.display = "block";
   divProg.style.display = "none";
   divSobre.style.display = "none";
@@ -70,13 +79,16 @@ function ShowDivEng() {
     circle2[i].style.color="transparent";
   }
 
-  var screen = window.matchMedia("(max-width: 1280px)")
+  var screen = window.matchMedia("(max-width: 1240px)")
   if (screen.matches) { // If media query matches
     window.scrollTo(0,180);
+    divEsquerdo.style.width = "100%";
   }
 } 
 
 function ShowDivProg() {
+  var divEsquerdo = document.getElementById("container_esquerdo");
+  var divDireito = document.getElementById("container_direito");
   var divProg = document.getElementById("container_prog");
   var divEng = document.getElementById("container_eng");
   var divSobre = document.getElementById("container_sobre");
@@ -88,6 +100,8 @@ function ShowDivProg() {
   var circleEng_2 = document.getElementById("circle_eng_2");
   var circleEng_3 = document.getElementById("circle_eng_3");
 
+  divEsquerdo.style.width = "50%";
+  divDireito.style.display ="inline-block";
   divEng.style.display = "none";
   divProg.style.display = "block";
   divSobre.style.display = "none";
@@ -114,13 +128,16 @@ function ShowDivProg() {
   circleEng_2.style.borderColor = "gray";
   circleEng_3.style.borderColor = "gray";
 
-  var screen = window.matchMedia("(max-width: 1280px)")
+  var screen = window.matchMedia("(max-width: 1240px)")
   if (screen.matches) { // If media query matches
     window.scrollTo(0,180);
+    divEsquerdo.style.width = "100%";
   }
 } 
 
 function ShowDivSobre() {
+  var divDireito = document.getElementById("container_direito");
+  var divEsquerdo = document.getElementById("container_esquerdo");
   var divProg = document.getElementById("container_prog");
   var divEng = document.getElementById("container_eng");
   var divSobre = document.getElementById("container_sobre");
@@ -132,6 +149,8 @@ function ShowDivSobre() {
   var circleEng_2 = document.getElementById("circle_eng_2");
   var circleEng_3 = document.getElementById("circle_eng_3");
 
+  divEsquerdo.style.width = "50%";
+  divDireito.style.display ="inline-block";
   divEng.style.display = "none";
   divProg.style.display = "none";
   divSobre.style.display = "block";
@@ -158,9 +177,10 @@ function ShowDivSobre() {
   circleEng_2.style.borderColor = "gray";
   circleEng_3.style.borderColor = "gray";
 
-  var screen = window.matchMedia("(max-width: 1280px)")
+  var screen = window.matchMedia("(max-width: 1240px)")
   if (screen.matches) { // If media query matches
     window.scrollTo(0,180);
+    divEsquerdo.style.width = "100%";
   }
 }
 
@@ -174,15 +194,19 @@ function ButtonEng_eng() {
   var circleEng_3 = document.getElementById("circle_eng_3");
   
   
-  menuEng.src = "images/engeneering-1.png";
-  menuEng.style.border = "1px solid --cor_primaria1";
-  menuEng.style.borderRadius = "10px";
+  // menuEng.src = "images/engeneering-1.png";
+  // menuEng.style.border = "1px solid --cor_primaria1";
+  // menuEng.style.borderRadius = "10px";
 
-  menuSw.src = "images/solidworks-0.png";
-  menuSw.style.border = "none";
+  // menuSw.src = "images/solidworks-0.png";
+  // menuSw.style.border = "none";
 
-  menuPdm.src = "images/solidworks_pdm-0.png";
-  menuPdm.style.border = "none";
+  // menuPdm.src = "images/solidworks_pdm-0.png";
+  // menuPdm.style.border = "none";
+
+  menuEng.style.backgroundColor = "var(--cor_primaria1)";
+  menuSw.style.backgroundColor  = "transparent";
+  menuPdm.style.backgroundColor  = "transparent";
 
   circleEng_0.style.borderColor = "red";
   circleEng_0.style.color = "red";
@@ -210,15 +234,19 @@ function ButtonEng_sw() {
   var circleEng_2 = document.getElementById("circle_eng_2");
   var circleEng_3 = document.getElementById("circle_eng_3");
 
-  menuEng.src = "images/engeneering-0.png";
-  menuEng.style.border = "none";
+  // menuEng.src = "images/engeneering-0.png";
+  // menuEng.style.border = "none";
 
-  menuSw.src = "images/solidworks-1.png";
-  menuSw.style.border = "1px solid --cor_primaria1";
-  menuSw.style.borderRadius = "10px";
+  // menuSw.src = "images/solidworks-1.png";
+  // menuSw.style.border = "1px solid --cor_primaria1";
+  // menuSw.style.borderRadius = "10px";
 
-  menuPdm.src = "images/solidworks_pdm-0.png";
-  menuPdm.style.border = "none";
+  // menuPdm.src = "images/solidworks_pdm-0.png";
+  // menuPdm.style.border = "none";
+
+  menuEng.style.backgroundColor = "transparent";
+  menuSw.style.backgroundColor  = "var(--cor_primaria1)";
+  menuPdm.style.backgroundColor  = "transparent";
 
   circleEng_0.style.borderColor = "red";
   circleEng_0.style.color = "red";
@@ -246,15 +274,19 @@ function ButtonEng_pdm() {
   var circleEng_2 = document.getElementById("circle_eng_2");
   var circleEng_3 = document.getElementById("circle_eng_3");
 
-  menuEng.src = "images/engeneering-0.png";
-  menuEng.style.border = "none";
+  // menuEng.src = "images/engeneering-0.png";
+  // menuEng.style.border = "none";
 
-  menuSw.src = "images/solidworks-0.png";
-  menuSw.style.border = "none";
+  // menuSw.src = "images/solidworks-0.png";
+  // menuSw.style.border = "none";
 
-  menuPdm.src = "images/solidworks_pdm-1.png";
-  menuPdm.style.border = "1px solid --cor_primaria1";
-  menuPdm.style.borderRadius = "10px";
+  // menuPdm.src = "images/solidworks_pdm-1.png";
+  // menuPdm.style.border = "1px solid --cor_primaria1";
+  // menuPdm.style.borderRadius = "10px";
+
+  menuEng.style.backgroundColor = "transparent";
+  menuSw.style.backgroundColor  = "transparent";
+  menuPdm.style.backgroundColor  = "var(--cor_primaria1)";
 
   circleEng_0.style.borderColor = "red";
   circleEng_0.style.color = "red";
@@ -280,21 +312,27 @@ function ButtonProg_py() {
   var menuKivy = document.getElementById("menu_icon_kivy");
   var menuVb = document.getElementById("menu_icon_vb");
 
-  menuPy.src = "images/python-1.png";
-  menuPy.style.border = "1px solid --cor_primaria1";
-  menuPy.style.borderRadius = "10px";
+  //menuPy.src = "images/python-1.png";
+  //menuPy.style.border = "1px solid --cor_primaria1";
+  //menuPy.style.borderRadius = "10px";
 
-  menuFlask.src = "images/flask-0.png";
-  menuFlask.style.border = "none";
+  //menuFlask.src = "images/flask-0.png";
+  //menuFlask.style.border = "none";
 
-  menuFront.src = "images/front-0.png";
-  menuFront.style.border = "none";
+  //menuFront.src = "images/front-0.png";
+  //menuFront.style.border = "none";
 
-  menuKivy.src = "images/kivy-0.png";
-  menuKivy.style.border = "none";
+  //menuKivy.src = "images/kivy-0.png";
+  //menuKivy.style.border = "none";
 
-  menuVb.src = "images/vb-0.png";
-  menuVb.style.border = "none";
+  //menuVb.src = "images/vb-0.png";
+  //menuVb.style.border = "none";
+
+  menuPy.style.backgroundColor = "var(--cor_primaria1)";
+  menuFlask.style.backgroundColor  = "transparent";
+  menuFront.style.backgroundColor  = "transparent";
+  menuKivy.style.backgroundColor  = "transparent";
+  menuVb.style.backgroundColor  = "transparent";
 
   var painelPy = document.getElementById("painel_py");
   var painelFlask = document.getElementById("painel_flask");
@@ -341,21 +379,27 @@ function ButtonProg_flask() {
   var menuKivy = document.getElementById("menu_icon_kivy");
   var menuVb = document.getElementById("menu_icon_vb");
 
-  menuPy.src = "images/python-0.png";
-  menuPy.style.border = "none";
+  //menuPy.src = "images/python-0.png";
+  //menuPy.style.border = "none";
 
-  menuFlask.src = "images/flask-1.png";
-  menuFlask.style.border = "1px solid --cor_primaria1";
-  menuFlask.style.borderRadius = "10px";
+  //menuFlask.src = "images/flask-1.png";
+  //menuFlask.style.border = "1px solid --cor_primaria1";
+  //menuFlask.style.borderRadius = "10px";
 
-  menuFront.src = "images/front-0.png";
-  menuFront.style.border = "none";
+  //menuFront.src = "images/front-0.png";
+  //menuFront.style.border = "none";
 
-  menuKivy.src = "images/kivy-0.png";
-  menuKivy.style.border = "none";
+  //menuKivy.src = "images/kivy-0.png";
+  //menuKivy.style.border = "none";
 
-  menuVb.src = "images/vb-0.png";
-  menuVb.style.border = "none";
+  //menuVb.src = "images/vb-0.png";
+  //menuVb.style.border = "none";
+
+  menuPy.style.backgroundColor = "transparent";
+  menuFlask.style.backgroundColor  = "var(--cor_primaria1)";
+  menuFront.style.backgroundColor  = "transparent";
+  menuKivy.style.backgroundColor  = "transparent";
+  menuVb.style.backgroundColor  = "transparent";
 
   var painelPy = document.getElementById("painel_py");
   var painelFlask = document.getElementById("painel_flask");
@@ -402,21 +446,27 @@ function ButtonProg_front() {
   var menuKivy = document.getElementById("menu_icon_kivy");
   var menuVb = document.getElementById("menu_icon_vb");
 
-  menuPy.src = "images/python-0.png";
-  menuPy.style.border = "none";
+  //menuPy.src = "images/python-0.png";
+  //menuPy.style.border = "none";
 
-  menuFlask.src = "images/flask-0.png";
-  menuFlask.style.border = "none";
+  //menuFlask.src = "images/flask-0.png";
+  //menuFlask.style.border = "none";
 
-  menuFront.src = "images/front-1.png";
-  menuFront.style.border = "1px solid --cor_primaria1";
-  menuFront.style.borderRadius = "10px";
+  //menuFront.src = "images/front-1.png";
+  //menuFront.style.border = "1px solid --cor_primaria1";
+  //menuFront.style.borderRadius = "10px";
 
-  menuKivy.src = "images/kivy-0.png";
-  menuKivy.style.border = "none";
+  //menuKivy.src = "images/kivy-0.png";
+  //menuKivy.style.border = "none";
 
-  menuVb.src = "images/vb-0.png";
-  menuVb.style.border = "none";
+  //menuVb.src = "images/vb-0.png";
+  //menuVb.style.border = "none";
+
+  menuPy.style.backgroundColor = "transparent";
+  menuFlask.style.backgroundColor  = "transparent";
+  menuFront.style.backgroundColor  = "var(--cor_primaria1)";
+  menuKivy.style.backgroundColor  = "transparent";
+  menuVb.style.backgroundColor  = "transparent";
 
   var painelPy = document.getElementById("painel_py");
   var painelFlask = document.getElementById("painel_flask");
@@ -463,21 +513,27 @@ function ButtonProg_kivy() {
   var menuKivy = document.getElementById("menu_icon_kivy");
   var menuVb = document.getElementById("menu_icon_vb");
 
-  menuPy.src = "images/python-0.png";
-  menuPy.style.border = "none";
+  //menuPy.src = "images/python-0.png";
+  //menuPy.style.border = "none";
 
-  menuFlask.src = "images/flask-0.png";
-  menuFlask.style.border = "none";
+  //menuFlask.src = "images/flask-0.png";
+  //menuFlask.style.border = "none";
 
-  menuFront.src = "images/front-0.png";
-  menuFront.style.border = "none";
+  //menuFront.src = "images/front-0.png";
+  //menuFront.style.border = "none";
 
-  menuKivy.src = "images/kivy-1.png";
-  menuKivy.style.border = "1px solid --cor_primaria1";
-  menuKivy.style.borderRadius = "10px";
+  //menuKivy.src = "images/kivy-1.png";
+  //menuKivy.style.border = "1px solid --cor_primaria1";
+  //menuKivy.style.borderRadius = "10px";
 
-  menuVb.src = "images/vb-0.png";
-  menuVb.style.border = "none";
+  //menuVb.src = "images/vb-0.png";
+  //menuVb.style.border = "none";
+
+  menuPy.style.backgroundColor = "transparent";
+  menuFlask.style.backgroundColor  = "transparent";
+  menuFront.style.backgroundColor  = "transparent";
+  menuKivy.style.backgroundColor  = "var(--cor_primaria1)";
+  menuVb.style.backgroundColor  = "transparent";
 
   var painelPy = document.getElementById("painel_py");
   var painelFlask = document.getElementById("painel_flask");
@@ -524,21 +580,27 @@ function ButtonProg_vb() {
   var menuKivy = document.getElementById("menu_icon_kivy");
   var menuVb = document.getElementById("menu_icon_vb");
 
-  menuPy.src = "images/python-0.png";
-  menuPy.style.border = "none";
+  //menuPy.src = "images/python-0.png";
+  //menuPy.style.border = "none";
 
-  menuFlask.src = "images/flask-0.png";
-  menuFlask.style.border = "none";
+  //menuFlask.src = "images/flask-0.png";
+  //menuFlask.style.border = "none";
 
-  menuFront.src = "images/front-0.png";
-  menuFront.style.border = "none";
+  //menuFront.src = "images/front-0.png";
+  //menuFront.style.border = "none";
 
-  menuKivy.src = "images/kivy-0.png";
-  menuKivy.style.border = "none";
+  //menuKivy.src = "images/kivy-0.png";
+  //menuKivy.style.border = "none";
 
-  menuVb.src = "images/vb-1.png";
-  menuVb.style.border = "1px solid --cor_primaria1";
-  menuVb.style.borderRadius = "10px";
+  //menuVb.src = "images/vb-1.png";
+  //menuVb.style.border = "1px solid --cor_primaria1";
+  //menuVb.style.borderRadius = "10px";
+
+  menuPy.style.backgroundColor = "transparent";
+  menuFlask.style.backgroundColor  = "transparent";
+  menuFront.style.backgroundColor  = "transparent";
+  menuKivy.style.backgroundColor  = "transparent";
+  menuVb.style.backgroundColor  = "var(--cor_primaria1)";
 
   var painelPy = document.getElementById("painel_py");
   var painelFlask = document.getElementById("painel_flask");

@@ -141,7 +141,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1240px) {
     .world {
         margin-top: 10%;
         margin-bottom: 5%;
