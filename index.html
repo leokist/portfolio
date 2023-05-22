@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type = "text/javascript" src="main.js"></script>
+</head>
+<body onload="ShowHome()">
+    <div class="container">
+        <div class="container_esquerdo">
+            <div class=container_titulo>
+                <h2 class="subtitulo">Portfolio</h2>
+                <h1 class="titulo">Leonardo Henrique Marin Kist</h1>
+            </div>
+            <div class="container_menu_principal">
+                <div class="world">
+                    <div class="cube" id="cube">
+                        <div class="circle circle_eng_0" id="circle_eng_0">Engenharia</div>
+                        <div class="circle circle_eng_1" id="circle_eng_1">Projetos</div>
+                        <div class="circle circle_eng_2" id="circle_eng_2">SolidWorks</div>
+                        <div class="circle circle_eng_3" id="circle_eng_3">PDM</div>
+                        <div class="circle2 circle_prog_0" id="circle_prog_0">Programação</div>
+                        <div class="circle2 circle_prog_1" id="circle_prog_1">Python</div>
+                        <div class="circle2 circle_prog_2" id="circle_prog_2">Flask</div>
+                        <div class="circle2 circle_prog_3" id="circle_prog_3">HTML</div>
+                        <div class="circle2 circle_prog_4" id="circle_prog_4">CSS</div>
+                        <div class="circle2 circle_prog_5" id="circle_prog_5">JavaScript</div>
+                        <div class="circle2 circle_prog_6" id="circle_prog_6">Kivy</div>
+                        <div class="circle2 circle_prog_7" id="circle_prog_7">Visual Basic</div>
+                    </div>
+                </div>
+                <ul class="menu_principal">
+                    <li class="menu_principal_item item_hover" id="item_home" onclick="ShowHome()">
+                        <input type="radio" name="radio" id="radio_home" class="radio" checked>
+                        <label class="container_radio" for="radio_home">Home</label>
+                    </li>
+                    <li class="menu_principal_item item_hover item_sobre" id="item_sobre" onclick="ShowDivSobre()">
+                        <input type="radio" name="radio" id="radio_sobre" class="radio">
+                        <label class="container_radio" for="radio_sobre">Sobre</label>
+                    </li>
+                    <li class="menu_principal_item item_hover item_eng" id="item_eng" onclick="ShowDivEng(); ButtonEng_eng()">
+                        <input type="radio" name="radio" id="radio_eng" class="radio">
+                        <label class="container_radio" for="radio_eng">Engenharia</label>
+                    </li>
+                    <li class="menu_principal_item item_hover" id="item_prog" onclick="ShowDivProg(); ButtonProg_py()">
+                        <input type="radio" name="radio" id="radio_prog" class="radio">
+                        <label class="container_radio" for="radio_prog">Programação</label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="container_direito" id="section2">
+            <div id="container_sobre" class="container_dir_all">
+                <img class="img_autor" src="images/solidworks_pdm-1.png">
+                <div class="container_texto">
+                    <p class="texto1">Titulo</p>
+                    <p class="texto2">Algum texto</p>
+                    <p class="texto3">Algum outro texto</p>
+                </div>
+                <div class="container_media">
+                    <!--GitHub ResearchGate Linkedin-->
+                    <img class="img_media" src="images/linkedin-0.png">
+                    <img class="img_media" src="images/github-0.png">
+                    <img class="img_media" src="images/rg-0.png">
+                </div>
+            </div>
+            <div id="container_eng" class="container_dir_all">
+                <div class="container_dir_titulo">
+                    <img class="rotate gear_icon" src="images/gear_black_48dp.png">
+                    <p class="dir_titulo">Engenharia</p>
+                </div>
+                <div class="flex-container-row">
+                    <div class="container_menu">
+                        <img onclick="ButtonEng_eng()" id="menu_icon_eng" class="menu_icon menu_icon2" src="images/engeneering-0.png">
+                        <img onclick="ButtonEng_sw()" id="menu_icon_sw" class="menu_icon" src="images/solidworks-0.png">
+                        <img onclick="ButtonEng_pdm()" id="menu_icon_pdm" class="menu_icon" src="images/solidworks_pdm-0.png">
+                    </div>
+                    <div class="container_painel" id="painel_eng">
+                        <div class="container_texto">
+                            <p class="texto1">Engenharia Mecânica</p>
+                        </div>
+                    </div>
+                    <div class="container_painel" id="painel_sw">
+                        <div class="container_texto">
+                            <p class="texto1">SolidWorks</p>
+                        </div>
+                    </div>
+                    <div class="container_painel" id="painel_pdm">
+                        <div class="container_texto">
+                            <p class="texto1">SolidWorks PDM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="container_prog" class="container_dir_all">       
+                <div class="container_dir_titulo">
+                    <img class="img_arrow" src="images/arrow.png">
+                    <p class="img_arrow_texto">Hello World!</p>
+                    <p class="img_arrow_texto2">_</p>
+                    <img class="img_arrow2" src="images/arrow.png">
+                </div>
+                <div class="flex-container-row">
+                    <div class="container_menu">
+                        <img onclick="ButtonProg_py()" id="menu_icon_py" class="menu_icon" src="images/python-0.png">
+                        <img onclick="ButtonProg_flask()" id="menu_icon_flask" class="menu_icon" src="images/flask-0.png">
+                        <img onclick="ButtonProg_front()" id="menu_icon_front" class="menu_icon" src="images/front-0.png">
+                        <img onclick="ButtonProg_kivy()" id="menu_icon_kivy" class="menu_icon" src="images/kivy-0.png">
+                        <img onclick="ButtonProg_vb()" id="menu_icon_vb" class="menu_icon" src="images/vb-0.png">
+                    </div>
+                    <div class="container_painel" id="painel_py">
+                        <div class="container_texto">
+                            <p class="texto1">Python</p>
+                        </div>
+                    </div>
+                    <div class="container_painel" id="painel_flask">
+                        <div class="container_texto">
+                            <p class="texto1">Flask</p>
+                        </div>
+                    </div>
+                    <div class="container_painel" id="painel_front">
+                        <div class="container_texto">
+                            <p class="texto1">Html + Css + JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="container_painel" id="painel_kivy">
+                        <div class="container_texto">
+                            <p class="texto1">Kivy</p>
+                        </div>
+                    </div>
+                    <div class="container_painel" id="painel_vb">
+                        <div class="container_texto">
+                            <p class="texto1">Visual Basic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

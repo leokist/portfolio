@@ -1,0 +1,108 @@
+/* || CONTAINER ESQUERDO*/
+.container_titulo {
+    display: block;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.titulo {
+    font-family: var(--fonte1);
+    font-size: 48px;
+    margin-top: 0px;
+    color: var(--cor_texto1);
+}
+
+.subtitulo {
+    font-family: var(--fonte2);
+    font-size: 36px;
+    margin-bottom: 0px;
+    color: var(--cor_texto2);
+}
+
+.titulo:hover,
+.subtitulo:hover {
+color: var(--cor_primaria1);
+}
+
+.container_menu_principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu_principal {
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+    margin-right: 20px;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.menu_principal_item {
+    padding: 0.4em 0 0.6em 0;
+    height: 1em;
+    font-family: var(--fonte1);
+    font-size: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--cor_texto1);
+    
+}
+
+.menu_principal_item:hover {
+    color: var(--cor_primaria2);
+    cursor: pointer;
+}
+
+.item_eng {
+    border-top: 1px solid var(--cor_texto2);
+    border-bottom: 1px solid var(--cor_texto2);
+}
+
+.item_sobre {
+    border-top: 1px solid var(--cor_texto2);
+}
+
+.container_radio {
+    width: 100%;
+}
+
+.radio {
+    display: none;
+}
+
+#radio_sobre:checked ~ .container_radio {color: var(--cor_primaria1);}
+#radio_prog:checked ~ .container_radio {color: var(--cor_primaria1);}
+#radio_eng:checked ~ .container_radio {color: var(--cor_primaria1);}
+#radio_home:checked ~ .container_radio {color: var(--cor_primaria1);}
+
+@media screen and (max-width: 1280px) {
+    .container_titulo {
+        margin-top: 10%;
+    }
+    .titulo {
+        font-size: 32px;
+    }
+    .subtitulo {
+        font-size: 24px;
+    }
+    .container_menu_principal { 
+        display: block;
+    }
+    .menu_principal {
+        width: 50%;
+        display: block;
+        float: right;
+    }
+    .menu_principal_item {
+        font-size: 16px;
+    }
+}

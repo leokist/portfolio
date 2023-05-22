@@ -1,0 +1,96 @@
+@import url("css/world.css");
+@import url("css/esquerdo.css");
+@import url("css/direito.css");
+
+/* || VARIÁVEIS*/
+:root {
+    --fonte1: "Righteous";
+    --fonte2: "Nothing You Could Do";
+    --cor_fundo1: #FAFAFA;
+    --cor_fundo2: #ffffff;
+    --cor_primaria1: #326BDC;
+    --cor_primaria2: #3b73e4;
+    --cor_texto1: #353535;
+    --cor_texto2: #4d4d4d;
+}
+
+
+/* || GERAL */ 
+html {
+    scroll-behavior: smooth;
+    scroll-t
+}
+
+/* || Textos */
+.texto1 {
+    font-family: var(--fonte1);
+    font-size: 32px;
+    color: var(--cor_primaria1);
+} 
+
+.texto2 {
+    font-family: var(--fonte1);
+    font-size: 28px;
+    color: var(--cor_texto1);
+} 
+.texto3 {
+    font-family: var(--fonte1);
+    font-size: 24px;
+    color: var(--cor_texto1);
+} 
+
+/* || CORPO*/
+body {
+    margin: 10px;
+    zoom: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container_esquerdo {
+    display: inline-block;
+    /*float: left;*/
+    width: 50%;
+    height: 96vh;
+    text-align: right;
+    box-shadow: 5px 0px 20px 0px black;
+    border-radius: 20px;
+}
+
+.container_direito {
+    display: inline-block;
+    /*float: right;*/
+    width: 50%;
+    height: 96vh;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .container_esquerdo {
+        width: 100%;
+        height: min-content;
+    }
+    .container_direito {
+        width: 100%;
+        height: min-content;
+    }
+    .texto1 {
+        font-size: 28px;
+    } 
+    .texto2 {
+        font-size: 24px;
+    } 
+    .texto3 {
+        font-size: 16px;
+    } 
+}
+
+
